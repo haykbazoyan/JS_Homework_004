@@ -23,4 +23,4 @@ function arrString(arrStr) {
   return minMaxLengthSum;
 }
 
-arrString([`anymore`, `raven`, `me`, `communicate`]);
+console.log(arrString([`anymore`, `raven`, `me`, `communicate`]));
