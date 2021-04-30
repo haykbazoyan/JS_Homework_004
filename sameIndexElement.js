@@ -7,7 +7,16 @@
 let mixedNumArray = [4, 3, 0, 9];
 
 function sameIndexElement(array) {
-  let sortArray = Array(array.length);
+  let max = 0;
+  let min = 0;
+
+  for (let key of array) {
+    if (key > max) {
+      max = key;
+    }
+  }
+
+  let sortArray = Array(max);
 
   for (let i = 0; i < array.length; i++) {
     sortArray[array[i]] = array[i];
