@@ -5,6 +5,22 @@ let arrNum = [21, -9, 15, 2116, -70, 33],
   num = -71;
 //             0    1   2    3    4    5
 
+function closestNumIndex(array, number) {
+  let currentNum = array[0] - number;
+  let subDiff = 0;
+  let index = 0;
+
+  for (let i = 1; i < array.length; i++) {
+    subDiff = array[i] - number;
+
+    if (subDiff < currentNum) {
+      currentNum = subDiff;
+      index = i;
+    }
+  }
+  return index;
+}
+
 function findElementInArr(array, number) {
   let result = 0;
   let diff = 0;
@@ -13,7 +29,7 @@ function findElementInArr(array, number) {
     if (array[key] === number) {
       return key;
     } else {
-      // I haven't finished this code yet
+      return closestNumIndex(array, number);
     }
   }
 }
